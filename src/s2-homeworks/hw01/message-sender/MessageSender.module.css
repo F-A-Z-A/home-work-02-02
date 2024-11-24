@@ -8,7 +8,7 @@
   font-size: 14px;
   font-weight: 400;
 
-  background-color: #F5F7FB;
+  background-color: #f5f7fb;
   padding: 10px 20px;
   resize: none;
   flex-grow: 1;
@@ -32,7 +32,7 @@ textarea::placeholder {
   height: 40px;
   border: none;
   border-radius: 20px;
-  background-color: #0066CC;
+  background-color: #0066cc;
 }
 
 .button:hover {
@@ -40,5 +40,4 @@ textarea::placeholder {
 }
 
 .button:active {
-
 }

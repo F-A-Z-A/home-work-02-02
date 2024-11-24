@@ -1,5 +1,4 @@
 .greetingForm {
-
 }
 
 .inputAndButtonContainer {
@@ -12,7 +11,7 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;
-  color: #CC0000;
+  color: #cc0000;
   margin: 6px 0;
 }
 
@@ -43,15 +42,14 @@
 .button {
   width: 78px;
   height: 36px;
-  background-color: #0066CC;
+  background-color: #0066cc;
   border-radius: 3px;
-
 
   font-family: Montserrat, sans-serif;
   font-size: 14px;
   font-weight: 600;
   line-height: 20px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .button:focus {
@@ -78,7 +76,6 @@
   font-weight: 500;
   line-height: 17px;
 }
-
 
 /*.greetingForm {*/
 /*}*/

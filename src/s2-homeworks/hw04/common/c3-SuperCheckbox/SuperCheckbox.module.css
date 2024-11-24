@@ -30,7 +30,7 @@
 .checkbox:checked {
   appearance: none;
 
-  background-image: url('checked.svg');
+  background-image: url("checked.svg");
   /*background: #99ff99;*/
 }
 
@@ -39,6 +39,6 @@
 }
 
 .spanClassName {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #06c;
 }
