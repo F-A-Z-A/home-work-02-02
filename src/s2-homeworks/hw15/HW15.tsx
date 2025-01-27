@@ -3,7 +3,6 @@ import s2 from "../../s1-main/App.module.css";
 import s from "./HW15.module.css";
 import axios from "axios";
 import SuperPagination from "./common/c9-SuperPagination/SuperPagination";
-import { useSearchParams } from "react-router-dom";
 import SuperSort from "./common/c10-SuperSort/SuperSort";
 import { Loader } from "../hw10/Loader";
 
@@ -36,7 +35,6 @@ const HW15 = () => {
   const [count, setCount] = useState<number>(4);
   const [idLoading, setLoading] = useState<boolean>(false);
   const [totalCount, setTotalCount] = useState<number>(100);
-  const [searchParams, setSearchParams] = useSearchParams();
   const [techs, setTechs] = useState<TechType[]>([]);
 
   const sendQuery = (params: ParamsType) => {
@@ -55,22 +53,16 @@ const HW15 = () => {
     setPage(newPage);
     setCount(newCount);
     sendQuery({ page: newPage, count: newCount, sort });
-    setSearchParams({ page: newPage.toString(), count: newCount.toString(), sort });
   };
 
   const onChangeSort = (newSort: string) => {
     setSort(newSort);
     setPage(1);
     sendQuery({ page, count, sort: newSort });
-    setSearchParams({ page: "1", count: count.toString(), sort: newSort });
   };
 
   useEffect(() => {
-    const params = Object.fromEntries(searchParams);
-    setPage(+params.page || 1);
-    setCount(+params.count || 4);
-    setSort(params.sort || "");
-    sendQuery({ page: +params.page, count: +params.count, sort: params.sort });
+    sendQuery({ page, count, sort });
   }, []);
 
   const mappedTechs = techs.map((t) => (
